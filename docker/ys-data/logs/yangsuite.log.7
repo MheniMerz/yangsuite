@@ -1,0 +1,2517 @@
+[2025-05-21 16:51:03.007 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:52:20.129 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:53:42.749 DEBUG       yangsuite.context_processors : 137]
+Adding menus from yangsuite
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Admin'; menus are now ('Admin',)
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Manage users → /admin' in menu 'Admin'
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Manage plugins → /yangsuite/plugins/' in menu 'Admin'
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'View logs → /yangsuite/logs' in menu 'Admin'
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Setup'; menus are now ('Admin', 'Setup')
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysfilemanager
+[2025-05-21 16:53:42.750 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'YANG files and repositories → /filemanager/repository/manage/' in menu 'Setup'
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'YANG module sets → /filemanager/yangsets/manage/' in menu 'Setup'
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysdevices
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Device profiles → /devices/devprofile' in menu 'Setup'
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysyangtree
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Explore'; menus are now ('Admin', 'Setup', 'Explore')
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'YANG → /yangtree/explore' in menu 'Explore'
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 137]
+Adding menus from yscoverage
+[2025-05-21 16:53:42.751 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Analytics'; menus are now ('Admin', 'Setup', 'Explore', 'Analytics')
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Datasets and diffs → /coverage/datasets' in menu 'Analytics'
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'SNMP to YANG Mapping → /coverage/yangsnmp' in menu 'Analytics'
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysgnmi
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Protocols'; menus are now ('Admin', 'Setup', 'Explore', 'Analytics', 'Protocols')
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'gNMI → /gnmi/explore' in menu 'Protocols'
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysgrpctelemetry
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'gRPC telemetry → /grpctelemetry' in menu 'Protocols'
+[2025-05-21 16:53:42.752 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysnetconf
+[2025-05-21 16:53:42.753 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'NETCONF → /netconf/getyang' in menu 'Protocols'
+[2025-05-21 16:53:42.753 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysrestconf
+[2025-05-21 16:53:42.753 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'RESTCONF → /restconf' in menu 'Protocols'
+[2025-05-21 16:53:42.753 INFO        yangsuite.context_processors : 122]
+yangsuite_menus is now: OrderedDict([('Admin', [YSMenuItem(text='Manage users', url='/admin'), YSMenuItem(text='Manage plugins', url='/yangsuite/plugins/'), YSMenuItem(text='View logs', url='/yangsuite/logs')]), ('Setup', [YSMenuItem(text='YANG files and repositories', url='/filemanager/repository/manage/'), YSMenuItem(text='YANG module sets', url='/filemanager/yangsets/manage/'), YSMenuItem(text='Device profiles', url='/devices/devprofile')]), ('Analytics', [YSMenuItem(text='Datasets and diffs', url='/coverage/datasets'), YSMenuItem(text='SNMP to YANG Mapping', url='/coverage/yangsnmp')]), ('Explore', [YSMenuItem(text='YANG', url='/yangtree/explore')]), ('Protocols', [YSMenuItem(text='gNMI', url='/gnmi/explore'), YSMenuItem(text='gRPC telemetry', url='/grpctelemetry'), YSMenuItem(text='NETCONF', url='/netconf/getyang'), YSMenuItem(text='RESTCONF', url='/restconf')])])
+[2025-05-21 16:53:42.754 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'label': 'Profile Name', 'type': 'string', 'description': 'Name of this device profile', 'minLength': 1, 'required': True, 'default': 'SONiC'}
+[2025-05-21 16:53:42.756 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'label': 'Profile Name', 'type': 'string', 'description': 'Name of this device profile', 'minLength': 1, 'required': True, 'default': 'SONiC'}
+[2025-05-21 16:53:42.756 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'label': 'Profile Name', 'type': 'string', 'description': 'Name of this device profile', 'minLength': 1, 'required': True, 'default': 'SONiC'}
+[2025-05-21 16:53:42.757 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'label': 'Profile Name', 'type': 'string', 'description': 'Name of this device profile', 'minLength': 1, 'required': True, 'default': 'SONiC'}
+[2025-05-21 16:53:42.757 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.757 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.757 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.758 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.758 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.758 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.758 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.758 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.759 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Verbose description', 'default': ''}
+[2025-05-21 16:53:42.759 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'string', 'description': 'Address or hostname to use as default for all protocols', 'required': True, 'default': '192.168.200.63'}
+[2025-05-21 16:53:42.759 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'string', 'description': 'Address or hostname to use as default for all protocols', 'required': True, 'default': '192.168.200.63'}
+[2025-05-21 16:53:42.760 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'string', 'description': 'Address or hostname to use as default for all protocols', 'required': True, 'default': '192.168.200.63'}
+[2025-05-21 16:53:42.760 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'type': 'string', 'description': 'Address or hostname to use as default for all protocols', 'required': True, 'default': '192.168.200.63'}
+[2025-05-21 16:53:42.760 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'string', 'description': 'Address or hostname to use as default for all protocols', 'required': True, 'default': '192.168.200.63'}
+[2025-05-21 16:53:42.760 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'string', 'description': 'Address or hostname to use as default for all protocols', 'required': True, 'default': '192.168.200.63'}
+[2025-05-21 16:53:42.761 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.761 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.761 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.761 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.761 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.762 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.762 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Username used as default for all protocols', 'maxLength': 50, 'default': 'admin'}
+[2025-05-21 16:53:42.762 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.763 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.763 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.763 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.763 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.763 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.764 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'password', 'description': 'Password used as default for all protocols', 'maxLength': 50, 'default': '_placeholder_'}
+[2025-05-21 16:53:42.764 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'int', 'description': 'Timeout (in seconds) as default for all protocols', 'default': 30, 'required': True}
+[2025-05-21 16:53:42.764 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'int', 'description': 'Timeout (in seconds) as default for all protocols', 'default': 30, 'required': True}
+[2025-05-21 16:53:42.764 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'int', 'description': 'Timeout (in seconds) as default for all protocols', 'default': 30, 'required': True}
+[2025-05-21 16:53:42.765 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'type': 'int', 'description': 'Timeout (in seconds) as default for all protocols', 'default': 30, 'required': True}
+[2025-05-21 16:53:42.765 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'int', 'description': 'Timeout (in seconds) as default for all protocols', 'default': 30, 'required': True}
+[2025-05-21 16:53:42.765 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'int', 'description': 'Timeout (in seconds) as default for all protocols', 'default': 30, 'required': True}
+[2025-05-21 16:53:42.766 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'dict', 'description': 'Key/value pairs of data associated with device', 'keyLabel': 'Variable Name', 'valueLabel': 'Value', 'default': {}}
+[2025-05-21 16:53:42.766 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'dict', 'description': 'Key/value pairs of data associated with device', 'keyLabel': 'Variable Name', 'valueLabel': 'Value', 'default': {}}
+[2025-05-21 16:53:42.767 DEBUG                    django.template : 930]
+Exception while resolving variable 'description' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [description] in {'label': 'Device supports gNMI', 'type': 'boolean', 'default': False}
+[2025-05-21 16:53:42.767 DEBUG                    django.template : 930]
+Exception while resolving variable 'description' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [description] in {'label': 'Platform', 'type': 'enum', 'choices': [('iosxe', 'IOS XE'), ('iosxr', 'IOS XR'), ('iosnx', 'IOS NX')], 'required': True, 'default': 'iosxe'}
+[2025-05-21 16:53:42.768 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'label': 'gNMI insecure port', 'type': 'int', 'description': 'Port number the device listens on', 'min': 1, 'max': 65535, 'default': 50052, 'required': True}
+[2025-05-21 16:53:42.768 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'label': 'gNMI insecure port', 'type': 'int', 'description': 'Port number the device listens on', 'min': 1, 'max': 65535, 'default': 50052, 'required': True}
+[2025-05-21 16:53:42.768 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'label': 'gNMI insecure port', 'type': 'int', 'description': 'Port number the device listens on', 'min': 1, 'max': 65535, 'default': 50052, 'required': True}
+[2025-05-21 16:53:42.769 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'label': 'gNMI secure port', 'type': 'int', 'description': 'Port number the device listens on', 'min': 1, 'max': 65535, 'default': 9339, 'required': True}
+[2025-05-21 16:53:42.769 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'label': 'gNMI secure port', 'type': 'int', 'description': 'Port number the device listens on', 'min': 1, 'max': 65535, 'default': 9339, 'required': True}
+[2025-05-21 16:53:42.769 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'label': 'gNMI secure port', 'type': 'int', 'description': 'Port number the device listens on', 'min': 1, 'max': 65535, 'default': 9339, 'required': True}
+[2025-05-21 16:53:42.770 DEBUG                    django.template : 930]
+Exception while resolving variable 'description' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [description] in {'label': 'Use TLS Certificate', 'type': 'boolean', 'default': False}
+[2025-05-21 16:53:42.770 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.770 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.770 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.771 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.771 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.771 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.771 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'label': 'TLS host override', 'type': 'string', 'description': 'Set to CN of certificate (hostname requires DNS).', 'minLength': 1, 'default': ''}
+[2025-05-21 16:53:42.772 DEBUG                    django.template : 930]
+Exception while resolving variable 'description' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [description] in {'label': 'Device supports NETCONF', 'type': 'boolean', 'default': False}
+[2025-05-21 16:53:42.773 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'label': 'NETCONF port', 'type': 'int', 'description': 'Port number NETCONF listens on', 'min': 1, 'max': 65535, 'default': 830, 'required': True}
+[2025-05-21 16:53:42.773 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'label': 'NETCONF port', 'type': 'int', 'description': 'Port number NETCONF listens on', 'min': 1, 'max': 65535, 'default': 830, 'required': True}
+[2025-05-21 16:53:42.774 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'label': 'NETCONF port', 'type': 'int', 'description': 'Port number NETCONF listens on', 'min': 1, 'max': 65535, 'default': 830, 'required': True}
+[2025-05-21 16:53:42.774 DEBUG                    django.template : 930]
+Exception while resolving variable 'description' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [description] in {'label': 'Skip SSH key validation for this device', 'type': 'boolean', 'default': False}
+[2025-05-21 16:53:42.774 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.775 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.775 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.775 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.775 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.775 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.776 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.776 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.776 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Address or hostname to access via NETCONF', 'default': ''}
+[2025-05-21 16:53:42.776 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.777 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.777 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.777 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.777 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.778 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.778 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'string', 'description': 'Username to access the device via NETCONF', 'minLength': 1, 'maxLength': 50, 'default': ''}
+[2025-05-21 16:53:42.778 DEBUG                    django.template : 930]
+Exception while resolving variable 'min' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'min'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [min] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.778 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.779 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.779 DEBUG                    django.template : 930]
+Exception while resolving variable 'default' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [default] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.779 DEBUG                    django.template : 930]
+Exception while resolving variable 'default' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [default] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.779 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.779 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.780 DEBUG                    django.template : 930]
+Exception while resolving variable 'label' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'label'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [label] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.780 DEBUG                    django.template : 930]
+Exception while resolving variable 'required' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [required] in {'type': 'password', 'description': 'Password to access the device via NETCONF', 'minLength': 1, 'maxLength': 50}
+[2025-05-21 16:53:42.780 DEBUG                    django.template : 930]
+Exception while resolving variable 'minLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'minLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [minLength] in {'type': 'int', 'description': 'Timeout, in seconds, for NETCONF requests', 'min': 0, 'default': ''}
+[2025-05-21 16:53:42.781 DEBUG                    django.template : 930]
+Exception while resolving variable 'max' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'max'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [max] in {'type': 'int', 'description': 'Timeout, in seconds, for NETCONF requests', 'min': 0, 'default': ''}
+[2025-05-21 16:53:42.781 DEBUG                    django.template : 930]
+Exception while resolving variable 'maxLength' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'maxLength'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [maxLength] in {'type': 'int', 'description': 'Timeout, in seconds, for NETCONF requests', 'min': 0, 'default': ''}
+[2025-05-21 16:53:42.781 DEBUG                    django.template : 930]
+Exception while resolving variable 'step' in template 'ysdevices/device_form.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+KeyError: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'dict' object has no attribute 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'step'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [step] in {'type': 'int', 'description': 'Timeout, in seconds, for NETCONF requests', 'min': 0, 'default': ''}

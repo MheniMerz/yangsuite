@@ -1,0 +1,1518 @@
+[2025-05-21 16:49:11.068 DEBUG         yangsuite.ysdevices.plugin : 404]
+Calling "ping -c 3 192.168.200.63"
+[2025-05-21 16:49:13.081 DEBUG         yangsuite.ysdevices.plugin : 410]
+b'PING 192.168.200.63 (192.168.200.63) 56(84) bytes of data.\n64 bytes from 192.168.200.63: icmp_seq=1 ttl=63 time=0.912 ms\n64 bytes from 192.168.200.63: icmp_seq=2 ttl=63 time=1.14 ms\n64 bytes from 192.168.200.63: icmp_seq=3 ttl=63 time=1.07 ms\n\n--- 192.168.200.63 ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2005ms\nrtt min/avg/max/mdev = 0.912/1.039/1.135/0.093 ms\n'
+[2025-05-21 16:49:13.151 DEBUG         yangsuite.ysdevices.plugin : 864]
+SSH CONNECTION:
+SONiC: 192.168.200.63:22
+user: admin 
+[2025-05-21 16:49:13.907 DEBUG     yangsuite.ysdevices.devprofile : 584]
+Result: {'base': {'label': 'ping', 'status': True}, 'restconf': {'label': 'RESTCONF', 'status': True}, 'ssh': {'label': 'SSH', 'status': True, 'reason': 'Connected successfully'}, 'status': True}
+[2025-05-21 16:49:14.359 INFO           yangsuite.ysdevices.views : 421]
+Connectivity check for SONiC: {'base': {'label': 'ping', 'status': True}, 'restconf': {'label': 'RESTCONF', 'status': True}, 'ssh': {'label': 'SSH', 'status': True, 'reason': 'Connected successfully'}, 'status': True, 'os_type': '', 'os_ver': ''}
+[2025-05-21 16:50:09.484 DEBUG       yangsuite.context_processors : 137]
+Adding menus from yangsuite
+[2025-05-21 16:50:09.484 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Admin'; menus are now ('Admin',)
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Manage users → /admin' in menu 'Admin'
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Manage plugins → /yangsuite/plugins/' in menu 'Admin'
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'View logs → /yangsuite/logs' in menu 'Admin'
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Setup'; menus are now ('Admin', 'Setup')
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysfilemanager
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'YANG files and repositories → /filemanager/repository/manage/' in menu 'Setup'
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'YANG module sets → /filemanager/yangsets/manage/' in menu 'Setup'
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysdevices
+[2025-05-21 16:50:09.485 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Device profiles → /devices/devprofile' in menu 'Setup'
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysyangtree
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Explore'; menus are now ('Admin', 'Setup', 'Explore')
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'YANG → /yangtree/explore' in menu 'Explore'
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 137]
+Adding menus from yscoverage
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Analytics'; menus are now ('Admin', 'Setup', 'Explore', 'Analytics')
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'Datasets and diffs → /coverage/datasets' in menu 'Analytics'
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'SNMP to YANG Mapping → /coverage/yangsnmp' in menu 'Analytics'
+[2025-05-21 16:50:09.486 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysgnmi
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 171]
+Added menu 'Protocols'; menus are now ('Admin', 'Setup', 'Explore', 'Analytics', 'Protocols')
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'gNMI → /gnmi/explore' in menu 'Protocols'
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysgrpctelemetry
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'gRPC telemetry → /grpctelemetry' in menu 'Protocols'
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysnetconf
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'NETCONF → /netconf/getyang' in menu 'Protocols'
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 137]
+Adding menus from ysrestconf
+[2025-05-21 16:50:09.487 DEBUG       yangsuite.context_processors : 184]
+Added menu item 'RESTCONF → /restconf' in menu 'Protocols'
+[2025-05-21 16:50:09.488 INFO        yangsuite.context_processors : 122]
+yangsuite_menus is now: OrderedDict([('Admin', [YSMenuItem(text='Manage users', url='/admin'), YSMenuItem(text='Manage plugins', url='/yangsuite/plugins/'), YSMenuItem(text='View logs', url='/yangsuite/logs')]), ('Setup', [YSMenuItem(text='YANG files and repositories', url='/filemanager/repository/manage/'), YSMenuItem(text='YANG module sets', url='/filemanager/yangsets/manage/'), YSMenuItem(text='Device profiles', url='/devices/devprofile')]), ('Analytics', [YSMenuItem(text='Datasets and diffs', url='/coverage/datasets'), YSMenuItem(text='SNMP to YANG Mapping', url='/coverage/yangsnmp')]), ('Explore', [YSMenuItem(text='YANG', url='/yangtree/explore')]), ('Protocols', [YSMenuItem(text='gNMI', url='/gnmi/explore'), YSMenuItem(text='gRPC telemetry', url='/grpctelemetry'), YSMenuItem(text='NETCONF', url='/netconf/getyang'), YSMenuItem(text='RESTCONF', url='/restconf')])])
+[2025-05-21 16:50:19.600 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:50:19.796 INFO                   yangsuite.plugins : 150]
+Installed plugins: ['yangsuite-coverage', 'yangsuite-devices', 'yangsuite-filemanager', 'yangsuite-gnmi', 'yangsuite-grpc-telemetry', 'yangsuite-netconf', 'yangsuite-restconf', 'yangsuite-yangtree']
+[2025-05-21 16:50:32.893 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:50:37.619 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:50:37.885 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:51:22.933 INFO    yangsuite.ysfilemanager.filemanager.repository : 181]
+Created YANG repository YANG repository 'SONiC' owned by 'mheni' (0 modules)
+[2025-05-21 16:51:23.178 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic" to user "mheni", setname/reponame "sonic"
+[2025-05-21 16:52:13.912 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:56:10.089 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:57:06.438 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 16:57:13.754 INFO    yangsuite.ysfilemanager.filemanager.repository : 181]
+Created YANG repository YANG repository 'SONiC-YANG' owned by 'mheni' (0 modules)
+[2025-05-21 16:57:13.985 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 16:57:42.418 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 16:57:42.446 DEBUG   yangsuite.ysfilemanager.filemanager.base : 488]
+Module 'openconfig-aaa': depends on module 'openconfig-aaa-radius' that was not scanned
+[2025-05-21 16:57:42.447 DEBUG   yangsuite.ysfilemanager.filemanager.base : 488]
+Module 'openconfig-aaa': depends on module 'openconfig-aaa-tacacs' that was not scanned
+[2025-05-21 16:57:42.447 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of iana-if-type@2015-06-12
+[2025-05-21 16:57:42.447 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of ietf-interfaces@2018-02-20
+[2025-05-21 16:57:42.447 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of ietf-yang-library@2016-06-21
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 6 dependencies of openconfig-aaa@2018-11-21
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 282]
+Dependency openconfig-aaa-tacacs is not in the yangset
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 282]
+Dependency openconfig-aaa-radius is not in the yangset
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-aaa-types@2018-11-21
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 9 dependencies of openconfig-acl@2018-11-21
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-alarm-types@2018-11-21
+[2025-05-21 16:57:42.448 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 6 dependencies of openconfig-alarms@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 9 dependencies of openconfig-if-aggregate@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 7 dependencies of openconfig-if-ethernet@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 8 dependencies of openconfig-if-ethernet-ext@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 13 dependencies of openconfig-if-ip@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 14 dependencies of openconfig-if-ip-ext@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 8 dependencies of openconfig-if-poe@2018-11-21
+[2025-05-21 16:57:42.449 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 14 dependencies of openconfig-if-tunnel@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-if-types@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-inet-types@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 5 dependencies of openconfig-interfaces@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 7 dependencies of openconfig-lldp@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-lldp-types@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 3 dependencies of openconfig-messages@2018-08-13
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 4 dependencies of openconfig-packet-match@2018-11-21
+[2025-05-21 16:57:42.450 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of openconfig-packet-match-types@2018-11-21
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 5 dependencies of openconfig-platform@2019-04-16
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of openconfig-platform-types@2019-06-03
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of openconfig-procmon@2018-11-21
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 7 dependencies of openconfig-sampling-sflow@2021-06-23
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 8 dependencies of openconfig-sampling-sflow-deviation@2020-06-23
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 17 dependencies of openconfig-system@2019-01-29
+[2025-05-21 16:57:42.451 DEBUG   yangsuite.ysfilemanager.filemanager.base : 282]
+Dependency openconfig-aaa-tacacs is not in the yangset
+[2025-05-21 16:57:42.452 DEBUG   yangsuite.ysfilemanager.filemanager.base : 282]
+Dependency openconfig-aaa-radius is not in the yangset
+[2025-05-21 16:57:42.452 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of openconfig-system-logging@2018-11-21
+[2025-05-21 16:57:42.452 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 2 dependencies of openconfig-system-management@2018-11-21
+[2025-05-21 16:57:42.452 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-system-terminal@2018-11-21
+[2025-05-21 16:57:42.452 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-types@2018-11-21
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 11 dependencies of openconfig-vlan@2018-11-21
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-vlan-types@2018-11-21
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of openconfig-yang-types@2018-11-21
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 3 dependencies of sonic-acl@2019-05-15
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 3 dependencies of sonic-interface@2019-07-02
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of sonic-mgmt_port@2021-04-07
+[2025-05-21 16:57:42.453 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of sonic-port@2019-05-15
+[2025-05-21 16:57:42.454 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 4 dependencies of sonic-portchannel@2021-06-13
+[2025-05-21 16:57:42.454 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 8 dependencies of sonic-sflow@2023-04-11
+[2025-05-21 16:57:42.454 DEBUG   yangsuite.ysfilemanager.filemanager.base : 278]
+Checking 1 dependencies of sonic-show-techsupport@2019-10-15
+[2025-05-21 16:57:42.454 INFO    yangsuite.ysfilemanager.filemanager.base : 287]
+Missing dependencies for YANG repository 'SONiC-YANG' owned by 'mheni' (52 modules): [('openconfig-aaa-radius', 'unknown', None), ('openconfig-aaa-tacacs', 'unknown', None)]
+[2025-05-21 17:12:57.414 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:12:57.417 DEBUG   yangsuite.ysfilemanager.filemanager.utility : 174]
+Adding 2 files from /ys-data/users/mheni/scratch/tmpfg4ik3m7 to /ys-data/users/mheni/repositories/sonic-yang
+[2025-05-21 17:12:57.417 DEBUG   yangsuite.ysfilemanager.quickparser :  89]
+Checking contents of /ys-data/users/mheni/scratch/tmpfg4ik3m7/openconfig-aaa-radius.yang to find module name/revision
+[2025-05-21 17:12:57.417 DEBUG   yangsuite.ysfilemanager.quickparser :  89]
+Checking contents of /ys-data/users/mheni/scratch/tmpfg4ik3m7/openconfig-aaa-tacacs.yang to find module name/revision
+[2025-05-21 17:12:57.418 DEBUG   yangsuite.ysfilemanager.filemanager.utility : 222]
+File add/upload completed. 2 files added, 0 updated, 0 unchanged, 0 errors
+[2025-05-21 17:13:22.559 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:14:00.791 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:00.792 INFO    yangsuite.ysfilemanager.filemanager.mutableyangset :  44]
+Saved YANG set YANG set 'sonic-module-set' owned by 'mheni' (0 modules) to /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:01.013 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:14:01.013 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:01.015 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (0 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:01.015 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:01.016 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (0 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:01.020 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:14:01.020 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:01.022 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (0 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:01.022 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:01.024 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (0 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:01.107 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:28.792 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:14:32.853 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:14:32.854 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:32.856 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:32.856 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:32.858 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:40.805 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:14:40.805 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:40.807 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:40.807 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:40.809 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:40.810 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-iana-if-type-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:14:40.811 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:40.812 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:40.813 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:40.815 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:40.815 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-iana-if-type-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:14:40.816 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree iana-if-type not in database.
+[2025-05-21 17:14:40.816 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['iana-if-type'].
+[2025-05-21 17:14:42.929 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree iana-if-type to database.
+[2025-05-21 17:14:50.440 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:14:50.441 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:50.443 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:50.443 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:50.445 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:58.295 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:14:58.295 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:58.297 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:58.297 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:58.299 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:58.300 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-aaa-radius-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:14:58.300 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:58.302 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:58.302 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:14:58.304 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:14:58.305 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-aaa-radius-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:14:58.305 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-aaa-radius not in database.
+[2025-05-21 17:14:58.305 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-aaa-radius'].
+[2025-05-21 17:15:00.389 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-aaa-radius to database.
+[2025-05-21 17:15:00.396 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-aaa to database.
+[2025-05-21 17:16:02.931 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:16:02.932 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:16:02.934 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:16:02.935 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:16:02.937 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:16:02.938 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-aaa-radius-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:16:02.938 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:16:02.940 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:16:02.941 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:16:02.943 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:16:02.943 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-aaa-radius-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:16:02.944 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-aaa-radius not in database.
+[2025-05-21 17:16:02.944 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-aaa-radius'].
+[2025-05-21 17:16:04.934 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-aaa-radius to database.
+[2025-05-21 17:16:04.940 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-aaa to database.
+[2025-05-21 17:16:19.923 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:16:19.924 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:16:19.927 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:16:19.927 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:16:19.930 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:17:03.143 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:17:52.673 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:17:52.673 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:17:52.675 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:17:52.675 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:17:52.677 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:17:52.678 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-sonic-interface-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:17:52.678 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:17:52.680 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:17:52.681 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:17:52.682 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:17:52.683 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-sonic-interface-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:17:52.683 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree sonic-interface not in database.
+[2025-05-21 17:17:52.683 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['sonic-interface'].
+[2025-05-21 17:17:54.427 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree sonic-interface to database.
+[2025-05-21 17:20:07.292 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:20:07.292 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:20:07.294 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:20:07.295 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:20:07.297 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:20:07.297 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 17:20:07.297 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 17:20:07.298 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 17:20:07.298 INFO        yangsuite.ysyangtree.context : 343]
+Context 'mheni:sonic-module-set' now fully loaded and ready
+[2025-05-21 17:20:20.104 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:20:20.105 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:20:20.106 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:20:20.107 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:20:20.108 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:20:20.109 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 17:21:32.641 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: netconf): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:21:33.404 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:21:48.751 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:21:48.755 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:21:48.756 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:21:48.758 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:21:48.758 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:21:48.760 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:22:01.391 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: None): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:22:05.033 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:22:05.034 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:22:05.036 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:22:05.036 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:22:05.038 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:22:24.185 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:22:24.186 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:22:24.188 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:22:24.188 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:22:24.190 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:22:24.190 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 17:22:24.190 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 17:22:24.190 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 17:22:24.190 INFO        yangsuite.ysyangtree.context : 343]
+Context 'mheni+sonic-module-set' now fully loaded and ready
+[2025-05-21 17:24:47.086 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: restconf): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 17:24:50.334 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:24:50.336 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:24:50.336 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:24:50.338 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:18.893 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:25:18.893 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:25:18.895 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:18.896 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:25:18.897 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:18.898 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 17:25:30.862 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:25:30.862 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:25:30.864 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:30.864 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:25:30.866 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:30.867 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 17:25:48.765 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:25:48.766 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:25:48.768 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:48.768 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:25:48.770 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:25:48.770 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 17:25:48.795 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) {'openconfig-acl'} from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 17:25:48.795 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 17:25:48.810 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-acl
+[2025-05-21 17:25:48.991 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 10 modules, of 54 available in repository
+[2025-05-21 17:25:48.992 DEBUG       yangsuite.ysyangtree.context : 435]
+Found identity derivers of ietf-interfaces: ['iana-if-type']
+[2025-05-21 17:25:48.992 DEBUG       yangsuite.ysyangtree.context : 454]
+Found 1 additional modules that derive identities: ['iana-if-type']
+[2025-05-21 17:25:49.026 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded iana-if-type
+[2025-05-21 17:25:49.045 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 11 modules, of 54 available in repository
+[2025-05-21 17:26:59.960 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:26:59.961 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:26:59.963 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:26:59.963 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:26:59.965 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:26:59.966 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-alarm-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:26:59.966 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:26:59.968 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:26:59.968 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:26:59.970 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:26:59.971 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-alarm-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:26:59.971 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-alarm-types not in database.
+[2025-05-21 17:26:59.971 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-alarm-types'].
+[2025-05-21 17:27:01.924 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-alarm-types to database.
+[2025-05-21 17:27:10.002 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:27:10.003 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:27:10.005 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:27:10.005 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:27:10.007 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:27:10.008 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-alarms-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:27:10.008 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:27:10.010 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:27:10.011 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:27:10.012 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:27:10.013 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-alarms-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 17:27:10.014 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-alarms not in database.
+[2025-05-21 17:27:10.014 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-alarms'].
+[2025-05-21 17:27:11.974 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-alarms to database.
+[2025-05-21 17:27:11.981 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-platform to database.
+[2025-05-21 17:27:12.011 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:27:12.011 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:27:12.013 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:27:12.013 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:27:12.015 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:27:12.016 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 17:29:26.347 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 17:29:26.348 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:29:26.350 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:29:26.350 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 17:29:26.352 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 17:29:26.353 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 18:00:28.453 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:00:28.454 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:00:28.456 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:00:28.456 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:00:28.458 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:00:28.458 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 18:00:29.454 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:00:29.454 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:00:29.456 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:00:29.456 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:00:29.458 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:00:29.459 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 18:00:34.579 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:00:34.580 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:00:34.582 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:00:34.582 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:00:34.584 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:00:34.584 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:00:34.584 WARNING     yangsuite.ysyangtree.context : 250]
+Cached instance not found, key sonic-module-set ref mheni
+[2025-05-21 18:00:34.585 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:00:34.585 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:00:34.585 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:00:34.585 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:00:34.585 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['sonic-vrf'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:00:34.610 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: ['sonic-portchannel', 'sonic-sflow']
+[2025-05-21 18:00:34.614 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded sonic-portchannel
+[2025-05-21 18:00:34.617 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded sonic-sflow
+[2025-05-21 18:00:34.619 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded sonic-vrf
+[2025-05-21 18:00:34.663 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 9 modules, of 54 available in repository
+[2025-05-21 18:00:34.663 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('openconfig-acl',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 11 modules loaded) with YSYangModels (YANG models ('sonic-vrf',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 9 modules loaded) under key "mheni"
+[2025-05-21 18:02:07.600 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:02:07.601 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:02:07.603 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:02:07.603 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:02:07.605 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:02:59.346 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:02:59.347 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:02:59.349 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:02:59.349 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:02:59.351 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:03:06.491 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:03:06.491 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:03:06.493 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:03:06.493 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:03:06.495 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:03:06.496 DEBUG       yangsuite.ysyangtree.context : 162]
+Cached ctx has same yangset
+[2025-05-21 18:04:09.815 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:04:09.816 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:04:09.817 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:04:09.818 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:04:09.820 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:04:09.820 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:04:09.820 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:04:09.820 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:04:09.820 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:04:09.820 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:04:09.820 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:04:09.820 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:04:09.821 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['ietf-interfaces'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:04:09.846 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: ['iana-if-type', 'openconfig-acl', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-interfaces', 'openconfig-lldp', 'openconfig-sampling-sflow', 'openconfig-sampling-sflow-deviation', 'openconfig-vlan']
+[2025-05-21 18:04:09.879 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded iana-if-type
+[2025-05-21 18:04:09.900 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded ietf-interfaces
+[2025-05-21 18:04:09.914 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-acl
+[2025-05-21 18:04:09.918 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-aggregate
+[2025-05-21 18:04:09.926 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-ethernet
+[2025-05-21 18:04:09.928 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-ethernet-ext
+[2025-05-21 18:04:09.951 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-ip
+[2025-05-21 18:04:09.954 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-ip-ext
+[2025-05-21 18:04:09.956 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-poe
+[2025-05-21 18:04:09.958 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-tunnel
+[2025-05-21 18:04:09.976 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-interfaces
+[2025-05-21 18:04:10.091 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-lldp
+[2025-05-21 18:04:10.098 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-sampling-sflow
+[2025-05-21 18:04:10.105 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-vlan
+[2025-05-21 18:04:10.107 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-sampling-sflow-deviation
+[2025-05-21 18:04:10.433 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 25 modules, of 54 available in repository
+[2025-05-21 18:04:10.434 DEBUG       yangsuite.ysyangtree.context : 435]
+Found identity derivers of ietf-interfaces: ['iana-if-type']
+[2025-05-21 18:04:10.438 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('sonic-vrf',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 9 modules loaded) with YSYangModels (YANG models ('ietf-interfaces',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 25 modules loaded) under key "mheni"
+[2025-05-21 18:04:56.869 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in get_restconf_parser
+    node_ids = [node['schema_node_id'] for node in nodes]
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in <listcomp>
+    node_ids = [node['schema_node_id'] for node in nodes]
+KeyError: 'schema_node_id'
+[2025-05-21 18:05:22.030 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:05:22.030 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:05:22.032 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:05:22.032 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:05:22.034 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:05:22.037 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-ietf-yang-library-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:05:22.037 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:05:22.039 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:05:22.040 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:05:22.041 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:05:22.044 INFO    yangsuite.ysyangtree.yangsettree : 569]
+Tree ietf-interfaces found in database.
+[2025-05-21 18:05:22.044 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-ietf-yang-library-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:05:22.044 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree ietf-yang-library not in database.
+[2025-05-21 18:05:22.045 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-ietf-yang-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:05:22.045 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree ietf-yang-types not in database.
+[2025-05-21 18:05:22.046 INFO    yangsuite.ysyangtree.yangsettree : 569]
+Tree ietf-inet-types found in database.
+[2025-05-21 18:05:22.047 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['ietf-yang-library', 'ietf-yang-types'].
+[2025-05-21 18:05:24.234 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree ietf-yang-types to database.
+[2025-05-21 18:05:24.241 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree ietf-yang-library to database.
+[2025-05-21 18:06:13.660 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:06:13.660 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:06:13.663 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:06:13.663 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:06:13.666 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:06:13.666 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:06:13.666 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:06:13.667 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:06:13.667 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:06:13.667 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:06:13.667 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:06:13.667 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:06:13.667 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:06:13.701 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:06:13.701 WARNING     yangsuite.ysyangtree.context : 524]
+Module ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types not found in the repository
+[2025-05-21 18:06:13.701 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:06:13.702 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) {'ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types'} from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:06:13.702 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:06:13.702 WARNING     yangsuite.ysyangtree.context : 524]
+Module ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types not found in the repository
+[2025-05-21 18:06:13.702 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:06:13.702 DEBUG       yangsuite.ysyangtree.ymodels : 292]
+Module 'ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types @ ' not found in ctx YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded
+[2025-05-21 18:06:13.702 DEBUG       yangsuite.ysyangtree.ymodels : 294]
+ctx.modules: []
+[2025-05-21 18:06:13.703 DEBUG       yangsuite.ysyangtree.ymodels : 295]
+ctx.revs: ['iana-if-type', 'ietf-inet-types', 'ietf-interfaces', 'ietf-yang-library', 'ietf-yang-types', 'openconfig-aaa', 'openconfig-aaa-radius', 'openconfig-aaa-tacacs', 'openconfig-aaa-types', 'openconfig-acl', 'openconfig-alarm-types', 'openconfig-alarms', 'openconfig-extensions', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-if-types', 'openconfig-inet-types', 'openconfig-interfaces', 'openconfig-lldp', 'openconfig-lldp-types', 'openconfig-messages', 'openconfig-packet-match', 'openconfig-packet-match-types', 'openconfig-platform', 'openconfig-platform-types', 'openconfig-procmon', 'openconfig-sampling-sflow', 'openconfig-sampling-sflow-deviation', 'openconfig-system', 'openconfig-system-logging', 'openconfig-system-management', 'openconfig-system-terminal', 'openconfig-types', 'openconfig-vlan', 'openconfig-vlan-types', 'openconfig-yang-types', 'sonic-acl', 'sonic-common', 'sonic-extension', 'sonic-extensions', 'sonic-interface', 'sonic-mgmt_port', 'sonic-mgmt_vrf', 'sonic-port', 'sonic-portchannel', 'sonic-sflow', 'sonic-show-techsupport', 'sonic-types', 'sonic-vrf']
+[2025-05-21 18:06:13.703 WARNING     yangsuite.ysyangtree.ymodels : 178]
+Unable to locate module "ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types" in context "YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded"
+[2025-05-21 18:06:13.703 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('ietf-interfaces',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 25 modules loaded) with YSYangModels (YANG models ('ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded) under key "mheni"
+[2025-05-21 18:06:13.703 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:06:13.703 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:06:13.703 WARNING     yangsuite.ysyangtree.context : 524]
+Module ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types not found in the repository
+[2025-05-21 18:06:13.703 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:06:13.704 DEBUG       yangsuite.ysyangtree.ymodels : 292]
+Module 'ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types @ ' not found in ctx YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded
+[2025-05-21 18:06:13.704 DEBUG       yangsuite.ysyangtree.ymodels : 294]
+ctx.modules: []
+[2025-05-21 18:06:13.704 DEBUG       yangsuite.ysyangtree.ymodels : 295]
+ctx.revs: ['iana-if-type', 'ietf-inet-types', 'ietf-interfaces', 'ietf-yang-library', 'ietf-yang-types', 'openconfig-aaa', 'openconfig-aaa-radius', 'openconfig-aaa-tacacs', 'openconfig-aaa-types', 'openconfig-acl', 'openconfig-alarm-types', 'openconfig-alarms', 'openconfig-extensions', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-if-types', 'openconfig-inet-types', 'openconfig-interfaces', 'openconfig-lldp', 'openconfig-lldp-types', 'openconfig-messages', 'openconfig-packet-match', 'openconfig-packet-match-types', 'openconfig-platform', 'openconfig-platform-types', 'openconfig-procmon', 'openconfig-sampling-sflow', 'openconfig-sampling-sflow-deviation', 'openconfig-system', 'openconfig-system-logging', 'openconfig-system-management', 'openconfig-system-terminal', 'openconfig-types', 'openconfig-vlan', 'openconfig-vlan-types', 'openconfig-yang-types', 'sonic-acl', 'sonic-common', 'sonic-extension', 'sonic-extensions', 'sonic-interface', 'sonic-mgmt_port', 'sonic-mgmt_vrf', 'sonic-port', 'sonic-portchannel', 'sonic-sflow', 'sonic-show-techsupport', 'sonic-types', 'sonic-vrf']
+[2025-05-21 18:06:13.704 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 110, in get_restconf_parser
+    ncparse.swagobj = ParseRestconf(user, names[0], ctx, node_ids,
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/rmodels.py", line 92, in __init__
+    super().__init__(name, '', ctx)
+  File "/usr/local/lib/python3.8/dist-packages/ysyangtree/ymodels.py", line 296, in __init__
+    raise ValueError("Unable to locate module '{0} @ {1}' in {2}; "
+ValueError: Unable to locate module 'ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types @ ' in YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded; has it been loaded?
+[2025-05-21 18:10:30.984 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:10:30.985 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:10:30.987 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:10:30.987 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:10:30.989 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:10:30.989 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:10:30.990 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:10:30.990 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:10:30.990 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:10:30.990 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:10:30.990 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:10:30.990 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:10:30.991 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-alarm-types,openconfig-alarms'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:10:31.015 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:10:31.015 WARNING     yangsuite.ysyangtree.context : 524]
+Module openconfig-alarm-types,openconfig-alarms not found in the repository
+[2025-05-21 18:10:31.015 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:10:31.016 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) {'openconfig-alarm-types,openconfig-alarms'} from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:10:31.016 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:10:31.016 WARNING     yangsuite.ysyangtree.context : 524]
+Module openconfig-alarm-types,openconfig-alarms not found in the repository
+[2025-05-21 18:10:31.016 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:10:31.016 DEBUG       yangsuite.ysyangtree.ymodels : 292]
+Module 'openconfig-alarm-types,openconfig-alarms @ ' not found in ctx YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded
+[2025-05-21 18:10:31.016 DEBUG       yangsuite.ysyangtree.ymodels : 294]
+ctx.modules: []
+[2025-05-21 18:10:31.017 DEBUG       yangsuite.ysyangtree.ymodels : 295]
+ctx.revs: ['iana-if-type', 'ietf-inet-types', 'ietf-interfaces', 'ietf-yang-library', 'ietf-yang-types', 'openconfig-aaa', 'openconfig-aaa-radius', 'openconfig-aaa-tacacs', 'openconfig-aaa-types', 'openconfig-acl', 'openconfig-alarm-types', 'openconfig-alarms', 'openconfig-extensions', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-if-types', 'openconfig-inet-types', 'openconfig-interfaces', 'openconfig-lldp', 'openconfig-lldp-types', 'openconfig-messages', 'openconfig-packet-match', 'openconfig-packet-match-types', 'openconfig-platform', 'openconfig-platform-types', 'openconfig-procmon', 'openconfig-sampling-sflow', 'openconfig-sampling-sflow-deviation', 'openconfig-system', 'openconfig-system-logging', 'openconfig-system-management', 'openconfig-system-terminal', 'openconfig-types', 'openconfig-vlan', 'openconfig-vlan-types', 'openconfig-yang-types', 'sonic-acl', 'sonic-common', 'sonic-extension', 'sonic-extensions', 'sonic-interface', 'sonic-mgmt_port', 'sonic-mgmt_vrf', 'sonic-port', 'sonic-portchannel', 'sonic-sflow', 'sonic-show-techsupport', 'sonic-types', 'sonic-vrf']
+[2025-05-21 18:10:31.017 WARNING     yangsuite.ysyangtree.ymodels : 178]
+Unable to locate module "openconfig-alarm-types,openconfig-alarms" in context "YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded"
+[2025-05-21 18:10:31.017 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('ietf-interfaces,ietf-yang-library,ietf-yang-types,ietf-inet-types',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded) with YSYangModels (YANG models ('openconfig-alarm-types,openconfig-alarms',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded) under key "mheni"
+[2025-05-21 18:10:31.017 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-alarm-types,openconfig-alarms'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:10:31.017 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:10:31.017 WARNING     yangsuite.ysyangtree.context : 524]
+Module openconfig-alarm-types,openconfig-alarms not found in the repository
+[2025-05-21 18:10:31.018 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:10:31.018 DEBUG       yangsuite.ysyangtree.ymodels : 292]
+Module 'openconfig-alarm-types,openconfig-alarms @ ' not found in ctx YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded
+[2025-05-21 18:10:31.018 DEBUG       yangsuite.ysyangtree.ymodels : 294]
+ctx.modules: []
+[2025-05-21 18:10:31.018 DEBUG       yangsuite.ysyangtree.ymodels : 295]
+ctx.revs: ['iana-if-type', 'ietf-inet-types', 'ietf-interfaces', 'ietf-yang-library', 'ietf-yang-types', 'openconfig-aaa', 'openconfig-aaa-radius', 'openconfig-aaa-tacacs', 'openconfig-aaa-types', 'openconfig-acl', 'openconfig-alarm-types', 'openconfig-alarms', 'openconfig-extensions', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-if-types', 'openconfig-inet-types', 'openconfig-interfaces', 'openconfig-lldp', 'openconfig-lldp-types', 'openconfig-messages', 'openconfig-packet-match', 'openconfig-packet-match-types', 'openconfig-platform', 'openconfig-platform-types', 'openconfig-procmon', 'openconfig-sampling-sflow', 'openconfig-sampling-sflow-deviation', 'openconfig-system', 'openconfig-system-logging', 'openconfig-system-management', 'openconfig-system-terminal', 'openconfig-types', 'openconfig-vlan', 'openconfig-vlan-types', 'openconfig-yang-types', 'sonic-acl', 'sonic-common', 'sonic-extension', 'sonic-extensions', 'sonic-interface', 'sonic-mgmt_port', 'sonic-mgmt_vrf', 'sonic-port', 'sonic-portchannel', 'sonic-sflow', 'sonic-show-techsupport', 'sonic-types', 'sonic-vrf']
+[2025-05-21 18:10:31.018 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 110, in get_restconf_parser
+    ncparse.swagobj = ParseRestconf(user, names[0], ctx, node_ids,
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/rmodels.py", line 92, in __init__
+    super().__init__(name, '', ctx)
+  File "/usr/local/lib/python3.8/dist-packages/ysyangtree/ymodels.py", line 296, in __init__
+    raise ValueError("Unable to locate module '{0} @ {1}' in {2}; "
+ValueError: Unable to locate module 'openconfig-alarm-types,openconfig-alarms @ ' in YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded; has it been loaded?
+[2025-05-21 18:12:13.584 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:12:13.585 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:12:13.587 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:12:13.587 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:12:13.589 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:12:13.590 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-aggregate-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.590 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:12:13.592 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:12:13.592 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:12:13.594 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:12:13.595 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-aggregate-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.595 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-aggregate not in database.
+[2025-05-21 18:12:13.604 INFO    yangsuite.ysyangtree.yangsettree : 569]
+Tree openconfig-if-ethernet found in database.
+[2025-05-21 18:12:13.605 INFO    yangsuite.ysyangtree.yangsettree : 572]
+Supported tree openconfig-if-ethernet found in database.
+[2025-05-21 18:12:13.605 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-ethernet-ext-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.605 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-ethernet-ext not in database.
+[2025-05-21 18:12:13.606 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-ip-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.606 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-ip not in database.
+[2025-05-21 18:12:13.606 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-ip-ext-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.607 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-ip-ext not in database.
+[2025-05-21 18:12:13.607 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-poe-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.607 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-poe not in database.
+[2025-05-21 18:12:13.608 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-tunnel-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.608 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-tunnel not in database.
+[2025-05-21 18:12:13.608 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-if-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:12:13.608 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-if-types not in database.
+[2025-05-21 18:12:13.609 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-if-aggregate', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-if-types'].
+[2025-05-21 18:12:15.878 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-aggregate to database.
+[2025-05-21 18:12:15.885 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-ethernet-ext to database.
+[2025-05-21 18:12:15.888 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-ip to database.
+[2025-05-21 18:12:15.893 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-ip-ext to database.
+[2025-05-21 18:12:15.897 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-poe to database.
+[2025-05-21 18:12:15.902 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-tunnel to database.
+[2025-05-21 18:12:15.906 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-types to database.
+[2025-05-21 18:12:15.910 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-if-ethernet to database.
+[2025-05-21 18:12:15.915 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-vlan to database.
+[2025-05-21 18:12:15.919 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-interfaces to database.
+[2025-05-21 18:15:19.431 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:15:19.431 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:15:19.433 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:15:19.434 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:15:19.435 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:15:19.436 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:15:19.436 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:15:19.436 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:15:19.436 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:15:19.436 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:15:19.436 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:15:19.436 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:15:19.436 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-if-ip'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:15:19.462 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: ['openconfig-if-ip-ext', 'openconfig-if-tunnel']
+[2025-05-21 18:15:19.487 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-ip
+[2025-05-21 18:15:19.490 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-ip-ext
+[2025-05-21 18:15:19.492 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-if-tunnel
+[2025-05-21 18:15:19.921 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 16 modules, of 54 available in repository
+[2025-05-21 18:15:19.922 DEBUG       yangsuite.ysyangtree.context : 435]
+Found identity derivers of ietf-interfaces: ['iana-if-type']
+[2025-05-21 18:15:19.923 DEBUG       yangsuite.ysyangtree.context : 454]
+Found 1 additional modules that derive identities: ['iana-if-type']
+[2025-05-21 18:15:19.956 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded iana-if-type
+[2025-05-21 18:15:19.957 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 16 modules, of 54 available in repository
+[2025-05-21 18:15:19.958 DEBUG       yangsuite.ysyangtree.ymodels : 157]
+Added 2 extra modules {'openconfig-vlan', 'openconfig-interfaces'} to base modules ['openconfig-if-ip'] as augmentation targets and/or supermodules
+[2025-05-21 18:15:19.958 DEBUG       yangsuite.ysyangtree.ymodels : 157]
+Added 2 extra modules {'openconfig-if-ethernet', 'openconfig-if-aggregate'} to base modules ['openconfig-if-ip'] as augmentation targets and/or supermodules
+[2025-05-21 18:15:19.990 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('openconfig-alarm-types,openconfig-alarms',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded) with YSYangModels (YANG models ('openconfig-if-ip', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-interfaces', 'openconfig-vlan'), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 16 modules loaded) under key "mheni"
+[2025-05-21 18:16:22.019 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:16:22.019 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:16:22.021 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:16:22.021 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:16:22.023 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:21.797 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:20:21.798 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:21.800 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:21.800 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:21.802 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:21.803 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-lldp-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:20:21.804 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:21.805 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:21.806 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:21.808 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:21.808 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-lldp-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:20:21.809 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-lldp-types not in database.
+[2025-05-21 18:20:21.809 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-lldp-types'].
+[2025-05-21 18:20:23.696 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-lldp-types to database.
+[2025-05-21 18:20:35.357 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:20:35.358 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:35.360 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:35.360 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:35.362 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:35.363 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-messages-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:20:35.363 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:35.365 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:35.365 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:20:35.367 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:20:35.368 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-messages-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:20:35.368 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-messages not in database.
+[2025-05-21 18:20:35.368 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-messages'].
+[2025-05-21 18:20:37.280 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-messages to database.
+[2025-05-21 18:21:29.007 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:21:29.007 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:21:29.009 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:21:29.009 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:21:29.011 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:21:32.724 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:21:32.724 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:21:32.726 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:21:32.726 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:21:32.728 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:21:32.728 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:21:32.728 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:21:32.728 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:21:32.729 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:21:32.729 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:21:32.729 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:21:32.729 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:21:32.729 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-messages'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:21:32.754 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: ['openconfig-system']
+[2025-05-21 18:21:32.758 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-messages
+[2025-05-21 18:21:32.775 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-system
+[2025-05-21 18:21:33.054 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 18 modules, of 54 available in repository
+[2025-05-21 18:21:33.056 DEBUG       yangsuite.ysyangtree.context : 435]
+Found identity derivers of openconfig-aaa-types: ['openconfig-aaa-tacacs', 'openconfig-aaa-radius']
+[2025-05-21 18:21:33.056 DEBUG       yangsuite.ysyangtree.context : 454]
+Found 2 additional modules that derive identities: ['openconfig-aaa-radius', 'openconfig-aaa-tacacs']
+[2025-05-21 18:21:33.059 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-aaa-radius
+[2025-05-21 18:21:33.062 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-aaa-tacacs
+[2025-05-21 18:21:33.062 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 18 modules, of 54 available in repository
+[2025-05-21 18:21:33.063 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('openconfig-if-ip', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-interfaces', 'openconfig-vlan'), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 16 modules loaded) with YSYangModels (YANG models ('openconfig-messages',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 18 modules loaded) under key "mheni"
+[2025-05-21 18:21:33.064 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in get_restconf_parser
+    node_ids = [node['schema_node_id'] for node in nodes]
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in <listcomp>
+    node_ids = [node['schema_node_id'] for node in nodes]
+KeyError: 'schema_node_id'
+[2025-05-21 18:22:24.759 DEBUG     yangsuite.ysdevices.devprofile : 212]
+Device profile list (filter: restconf): [{'name': 'SONiC', 'key': 'sonic', 'description': ''}]
+[2025-05-21 18:23:19.654 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:23:19.655 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:23:19.657 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:23:19.657 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:23:19.659 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:23:19.659 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:23:19.659 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:23:19.659 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:23:19.659 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:23:19.660 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:23:19.660 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:23:19.660 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:23:19.660 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['ietf-yang-library'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:23:19.685 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:23:19.689 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded ietf-yang-library
+[2025-05-21 18:23:19.714 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 3 modules, of 54 available in repository
+[2025-05-21 18:23:19.716 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('openconfig-messages',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 18 modules loaded) with YSYangModels (YANG models ('ietf-yang-library',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 3 modules loaded) under key "mheni"
+[2025-05-21 18:23:19.716 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in get_restconf_parser
+    node_ids = [node['schema_node_id'] for node in nodes]
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in <listcomp>
+    node_ids = [node['schema_node_id'] for node in nodes]
+KeyError: 'schema_node_id'
+[2025-05-21 18:24:51.544 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:24:51.544 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:24:51.546 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:24:51.547 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:24:51.548 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:24:51.548 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:24:51.549 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:24:51.549 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:24:51.549 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:24:51.549 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:24:51.549 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:24:51.549 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:24:51.549 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-messages'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:24:51.576 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: ['openconfig-system']
+[2025-05-21 18:24:51.580 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-messages
+[2025-05-21 18:24:51.597 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-system
+[2025-05-21 18:24:51.990 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 18 modules, of 54 available in repository
+[2025-05-21 18:24:51.991 DEBUG       yangsuite.ysyangtree.context : 435]
+Found identity derivers of openconfig-aaa-types: ['openconfig-aaa-tacacs', 'openconfig-aaa-radius']
+[2025-05-21 18:24:51.991 DEBUG       yangsuite.ysyangtree.context : 454]
+Found 2 additional modules that derive identities: ['openconfig-aaa-radius', 'openconfig-aaa-tacacs']
+[2025-05-21 18:24:51.995 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-aaa-radius
+[2025-05-21 18:24:51.997 DEBUG       yangsuite.ysyangtree.context : 512]
+Successfully loaded openconfig-aaa-tacacs
+[2025-05-21 18:24:51.997 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 18 modules, of 54 available in repository
+[2025-05-21 18:24:51.998 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('ietf-yang-library',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 3 modules loaded) with YSYangModels (YANG models ('openconfig-messages',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 18 modules loaded) under key "mheni"
+[2025-05-21 18:25:12.621 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:25:12.621 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:25:12.623 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:25:12.623 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:25:12.625 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:26:56.481 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in get_restconf_parser
+    node_ids = [node['schema_node_id'] for node in nodes]
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in <listcomp>
+    node_ids = [node['schema_node_id'] for node in nodes]
+KeyError: 'schema_node_id'
+[2025-05-21 18:26:59.700 ERROR                     django.request : 241]
+Internal Server Error: /restconf/genswag/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.8/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/views.py", line 149, in gen_swag
+    swagobj = generate_swagger(req)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 138, in generate_swagger
+    return get_restconf_parser(ysmodels, **request)
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in get_restconf_parser
+    node_ids = [node['schema_node_id'] for node in nodes]
+  File "/usr/local/lib/python3.8/dist-packages/ysrestconf/restconf.py", line 79, in <listcomp>
+    node_ids = [node['schema_node_id'] for node in nodes]
+KeyError: 'schema_node_id'
+[2025-05-21 18:30:21.488 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:30:21.489 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:21.491 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:21.491 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:21.493 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:21.493 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-packet-match-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:30:21.494 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:21.496 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:21.496 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:21.498 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:21.498 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-packet-match-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:30:21.498 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-packet-match not in database.
+[2025-05-21 18:30:21.499 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-packet-match-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:30:21.499 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-packet-match-types not in database.
+[2025-05-21 18:30:21.499 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-packet-match', 'openconfig-packet-match-types'].
+[2025-05-21 18:30:23.400 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-packet-match to database.
+[2025-05-21 18:30:23.406 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-packet-match-types to database.
+[2025-05-21 18:30:46.494 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:30:46.494 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:46.497 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:46.497 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:46.499 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:46.502 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-platform-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:30:46.502 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:46.504 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:46.505 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:30:46.506 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:30:46.508 INFO    yangsuite.ysyangtree.yangsettree : 569]
+Tree openconfig-platform found in database.
+[2025-05-21 18:30:46.509 INFO    yangsuite.ysyangtree.yangsettree : 269]
+Failed to retreive tree "mheni-sonic-module-set-openconfig-platform-types-mheni-yangsuite-yangtree-default": YangSetTree matching query does not exist.
+[2025-05-21 18:30:46.509 INFO    yangsuite.ysyangtree.yangsettree : 566]
+Tree openconfig-platform-types not in database.
+[2025-05-21 18:30:46.509 INFO    yangsuite.ysyangtree.yangsettree : 611]
+Subprocess trees ['openconfig-platform-types'].
+[2025-05-21 18:30:48.433 INFO    yangsuite.ysyangtree.yangsettree : 641]
+Saving tree openconfig-platform-types to database.
+[2025-05-21 18:31:06.481 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni:sonic-module-set" to user "mheni", setname/reponame "sonic-module-set"
+[2025-05-21 18:31:06.481 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:31:06.483 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:31:06.483 DEBUG   yangsuite.ysfilemanager.filemanager.utility :  75]
+Split userset "mheni+sonic-yang" to user "mheni", setname/reponame "sonic-yang"
+[2025-05-21 18:31:06.485 INFO    yangsuite.ysfilemanager.filemanager.yangset : 303]
+Loaded YANG set 'sonic-module-set' owned by 'mheni' (54 modules) from /ys-data/users/mheni/yangsets/sonic-module-set
+[2025-05-21 18:31:06.485 INFO        yangsuite.ysyangtree.context : 236]
+Check cached context reference mheni for sonic-module-set
+[2025-05-21 18:31:06.486 INFO        yangsuite.ysyangtree.context : 241]
+Cached context dereferenced mheni
+[2025-05-21 18:31:06.486 INFO        yangsuite.ysyangtree.context : 245]
+Discarding context sonic-module-set
+[2025-05-21 18:31:06.486 INFO        yangsuite.ysyangtree.context : 291]
+Initializing context for path 'YANG set 'sonic-module-set' owned by 'mheni' (54 modules)'
+[2025-05-21 18:31:06.486 INFO        yangsuite.ysyangtree.context : 299]
+Context stored with reference 'mheni'
+[2025-05-21 18:31:06.486 DEBUG       yangsuite.ysyangtree.context : 399]
+No module loading requested.
+[2025-05-21 18:31:06.486 INFO        yangsuite.ysyangtree.context : 343]
+Context 'sonic-module-set' now fully loaded and ready
+[2025-05-21 18:31:06.486 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-platform,openconfig-platform-types'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:31:06.511 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:31:06.511 WARNING     yangsuite.ysyangtree.context : 524]
+Module openconfig-platform,openconfig-platform-types not found in the repository
+[2025-05-21 18:31:06.511 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:31:06.511 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) {'openconfig-platform,openconfig-platform-types'} from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:31:06.512 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:31:06.512 WARNING     yangsuite.ysyangtree.context : 524]
+Module openconfig-platform,openconfig-platform-types not found in the repository
+[2025-05-21 18:31:06.512 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:31:06.512 DEBUG       yangsuite.ysyangtree.ymodels : 292]
+Module 'openconfig-platform,openconfig-platform-types @ ' not found in ctx YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded
+[2025-05-21 18:31:06.512 DEBUG       yangsuite.ysyangtree.ymodels : 294]
+ctx.modules: []
+[2025-05-21 18:31:06.512 DEBUG       yangsuite.ysyangtree.ymodels : 295]
+ctx.revs: ['iana-if-type', 'ietf-inet-types', 'ietf-interfaces', 'ietf-yang-library', 'ietf-yang-types', 'openconfig-aaa', 'openconfig-aaa-radius', 'openconfig-aaa-tacacs', 'openconfig-aaa-types', 'openconfig-acl', 'openconfig-alarm-types', 'openconfig-alarms', 'openconfig-extensions', 'openconfig-if-aggregate', 'openconfig-if-ethernet', 'openconfig-if-ethernet-ext', 'openconfig-if-ip', 'openconfig-if-ip-ext', 'openconfig-if-poe', 'openconfig-if-tunnel', 'openconfig-if-types', 'openconfig-inet-types', 'openconfig-interfaces', 'openconfig-lldp', 'openconfig-lldp-types', 'openconfig-messages', 'openconfig-packet-match', 'openconfig-packet-match-types', 'openconfig-platform', 'openconfig-platform-types', 'openconfig-procmon', 'openconfig-sampling-sflow', 'openconfig-sampling-sflow-deviation', 'openconfig-system', 'openconfig-system-logging', 'openconfig-system-management', 'openconfig-system-terminal', 'openconfig-types', 'openconfig-vlan', 'openconfig-vlan-types', 'openconfig-yang-types', 'sonic-acl', 'sonic-common', 'sonic-extension', 'sonic-extensions', 'sonic-interface', 'sonic-mgmt_port', 'sonic-mgmt_vrf', 'sonic-port', 'sonic-portchannel', 'sonic-sflow', 'sonic-show-techsupport', 'sonic-types', 'sonic-vrf']
+[2025-05-21 18:31:06.512 WARNING     yangsuite.ysyangtree.ymodels : 178]
+Unable to locate module "openconfig-platform,openconfig-platform-types" in context "YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded"
+[2025-05-21 18:31:06.512 INFO        yangsuite.ysyangtree.ymodels :  88]
+Replacing cached instance YSYangModels (YANG models ('openconfig-messages',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 18 modules loaded) with YSYangModels (YANG models ('openconfig-platform,openconfig-platform-types',), context YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded) under key "mheni"
+[2025-05-21 18:31:06.513 DEBUG       yangsuite.ysyangtree.context : 402]
+Loading module(s) ['openconfig-platform,openconfig-platform-types'] from repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)
+[2025-05-21 18:31:06.513 DEBUG       yangsuite.ysyangtree.context : 409]
+Will load upstream modules as well: []
+[2025-05-21 18:31:06.513 WARNING     yangsuite.ysyangtree.context : 524]
+Module openconfig-platform,openconfig-platform-types not found in the repository
+[2025-05-21 18:31:06.513 DEBUG       yangsuite.ysyangtree.context : 534]
+Have now loaded 0 modules, of 54 available in repository
+[2025-05-21 18:31:06.513 DEBUG       yangsuite.ysyangtree.ymodels : 292]
+Module 'openconfig-platform,openconfig-platform-types @ ' not found in ctx YSContext (repository YANG set 'sonic-module-set' owned by 'mheni' (54 modules)) with 0 modules loaded
+[2025-05-21 18:31:06.513 DEBUG       yangsuite.ysyangtree.ymodels : 294]
+ctx.modules: []
